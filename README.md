@@ -81,6 +81,7 @@ unprocessable_entity: 422
 
 ## Active Record Validations
 
+https://guides.rubyonrails.org/active_record_validations.html
 
 ```bash
 curl --header "Content-Type: application/json" --request POST --data '{"author": "JK", "title": "HP"}' http://localhost:3000/books -v
@@ -88,4 +89,12 @@ curl --header "Content-Type: application/json" --request POST --data '{"author":
 curl --header "Content-Type: application/json" --request POST --data '{"author": "JK", "title": "Harry Potter 1"}' http://localhost:3000/books -v
 
 curl --header "Content-Type: application/json" --request POST --data '{"author": "JK Rowling", "title": "Harry Potter 1"}' http://localhost:3000/books -v
+
+curl --header "Content-Type: application/json"  http://localhost:3000/books/1 -v
+```
+
+Destroy
+
+```bash
+curl --header "Content-Type: application/json" --request DELETE http://localhost:3000/books/3 -v
 ```
