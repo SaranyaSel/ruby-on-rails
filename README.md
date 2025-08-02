@@ -22,6 +22,7 @@ To see routes
 
 ```bash
 bin/rails routes
+bin/rails routes | grep book
 ```
 To see server
 
@@ -48,4 +49,21 @@ rails g model Book title:string author:string
 run migration
 ```bash
 bin/rails db:migrate
+```
+
+rails console
+
+```bash
+bin/rails c
+
+#inside console
+Book.create!(author: 'tom', title: 'Rails API')
+exit
+```
+
+get the route list for only book
+
+```bash
+bin/rails routes | grep book
+curl --request POST http://localhost:3000/books
 ```

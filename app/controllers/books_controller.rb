@@ -2,4 +2,15 @@ class BooksController < ApplicationController
   def index
     render json: Book.all # active record rows
   end
+
+  def create
+    # Book.create(title: 'Harry Ptter 1', author: 'JK Rowling')
+    book = Book.new(title: 'Harry Ptter 1', author: 'JK Rowling')
+
+    if book.save
+      render json: book, status: :created
+    else
+      render json: book.errors, status: :unprocessable_entity #422 unprocessable_entity It understands the request but it wasn't able to perform the action
+    end
+  end
 end
