@@ -112,3 +112,21 @@ Namespacing and versioning
 ```bash
 curl http://localhost:3000/api/v1/books -v
 ```
+
+Rspec test
+
+add it in gem file under development and run
+```bash
+gem 'rspec-rails'
+
+bundle
+rspec
+
+rails generate rspec:install
+
+gem 'factory_bot_rails'
+
+bundle exec rspec spec/requests/books_spec.rb:8
+```
+
+
