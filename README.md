@@ -98,3 +98,17 @@ Destroy
 ```bash
 curl --header "Content-Type: application/json" --request DELETE http://localhost:3000/books/3 -v
 ```
+
+Rescue operation
+https://apidock.com/rails/ActionController/Rescue/ClassMethods/rescue_from
+
+
+example for api
+https://docs.stripe.com/api/authentication
+
+
+Namespacing and versioning
+
+```bash
+curl http://localhost:3000/api/v1/books -v
+```
