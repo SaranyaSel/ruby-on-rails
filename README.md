@@ -6,19 +6,46 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+3.4.2
 
-* System dependencies
+* Rails version
+8.0.2
 
-* Configuration
+* Commands
+ to create new application
 
-* Database creation
+ ```bash
+   rails new nile --api
+```
 
-* Database initialization
+To see routes
 
-* How to run the test suite
+```bash
+bin/rails routes
+```
+To see server
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+bin/rails s
+```
 
-* Deployment instructions
+to generate controller
+```bash
+bin/rails g controller BooksController index
+```
 
-* ...
+To check code in verbose mode
+
+```bash
+curl http://localhost:3000/books -v
+```
+
+Run scaffolding model
+```bash
+rails g model Book title:string author:string
+```
+
+run migration
+```bash
+bin/rails db:migrate
+```
