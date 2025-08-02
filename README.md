@@ -66,4 +66,6 @@ get the route list for only book
 ```bash
 bin/rails routes | grep book
 curl --request POST http://localhost:3000/books
+
+curl --header "Content-Type: application/json" --request POST --data '{"author": "James", "title": "a book"}' http://localhost:3000/books -v
 ```
