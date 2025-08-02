@@ -4,7 +4,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    # Book.create(title: 'Harry Ptter 1', author: 'JK Rowling')
     book = Book.new(book_params)
 
     if book.save

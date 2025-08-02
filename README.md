@@ -69,3 +69,23 @@ curl --request POST http://localhost:3000/books
 
 curl --header "Content-Type: application/json" --request POST --data '{"author": "James", "title": "a book"}' http://localhost:3000/books -v
 ```
+
+
+## Status Code
+
+Check here http://www.railsstatuscodes.com/
+
+created: 201
+ok : 200
+unprocessable_entity: 422
+
+## Active Record Validations
+
+
+```bash
+curl --header "Content-Type: application/json" --request POST --data '{"author": "JK", "title": "HP"}' http://localhost:3000/books -v
+
+curl --header "Content-Type: application/json" --request POST --data '{"author": "JK", "title": "Harry Potter 1"}' http://localhost:3000/books -v
+
+curl --header "Content-Type: application/json" --request POST --data '{"author": "JK Rowling", "title": "Harry Potter 1"}' http://localhost:3000/books -v
+```
