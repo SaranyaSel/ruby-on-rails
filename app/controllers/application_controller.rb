@@ -1,2 +1,9 @@
 class ApplicationController < ActionController::API
+  rescue_form ActiveRecord::RecordNotDestroyed, with: :not_destroyed
+
+  private
+
+  def not_destroyed
+    render json: { errors: e.record.errors }, status: :unprocessable_entity
+  end
 end
