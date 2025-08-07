@@ -146,10 +146,26 @@ book2 = Book.create!(title: 'The chamber of secerts', author: author)
 author
 author.books
 book.author
+exit
 ```
 
+Controller Representers
 
 ```bash
+curl http://localhost:3000/api/v1/books -v
+bin/rails c
+Book.select { |book| book.author_id.nil? }
+Book.select { |book| book.author_id.nil? }.count
+Book.count
+Book.select { |book| book.author_id.nil? }.map(&:destroy)
+Book.count
+exit
+```
+
+```bash
+curl http://localhost:3000/api/v1/books
+
+
 
 
 ```
