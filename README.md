@@ -129,4 +129,27 @@ gem 'factory_bot_rails'
 bundle exec rspec spec/requests/books_spec.rb:8
 ```
 
+Model Associations
 
+```bash
+bin/rails g model Author first_name:string last_name:string age:integer
+bin/rails db:migrate
+bin/rails g migration add_author_to_books author:references # add author to book using the references author
+bin/rails db:migrate
+bin/rails g migration remove_author_from_books author:string # remove the author from books
+bin/rails db:migrate
+bin/rails c
+
+author = Author.create!(first_name: 'JK', last_name: 'Rowling', age: 55)
+book = Book.create!(title: 'The Pilosophers Stone', author: author)
+book2 = Book.create!(title: 'The chamber of secerts', author: author)
+author
+author.books
+book.author
+```
+
+
+```bash
+
+
+```
