@@ -165,7 +165,7 @@ exit
 ```bash
 curl http://localhost:3000/api/v1/books
 
-
+binding.irb
 
 
 ```
