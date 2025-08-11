@@ -12,7 +12,7 @@ module Api
         book = Book.new(book_params.merge(author_id: author.id))
 
         if book.save
-          render json: book, status: :created
+          render json: BookRepresenter.new(book).as_json, status: :created
         else
           render json: book.errors, status: :unprocessable_entity #422 unprocessable_entity It understands the request but it wasn't able to perform the action
         end
