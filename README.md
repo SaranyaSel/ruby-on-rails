@@ -166,6 +166,10 @@ exit
 curl http://localhost:3000/api/v1/books
 
 binding.irb
+binding.pry(another version)
 
+curl --header "Content-Type: application/json" --request POST --data '{"book": {"name":"Eloquent Ruby"}},{"author":{"first_name": "Russ", "Last_name": "olsen","age": 30}}' http://localhost:3000/books -v
+
+bin/rails g job update_sku
 
 ```
